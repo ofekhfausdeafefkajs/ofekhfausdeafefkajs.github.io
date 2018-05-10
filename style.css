@@ -1,0 +1,93 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	background:#0c0d39;
+}
+
+img{
+	max-width: 100%;
+
+}
+
+.col-4{
+	    padding-right: 0px!important;
+       /* padding-left: 0px!important;*/
+       padding-top: 10px;
+}
+.col-8{
+	 padding-right: 0px!important;
+	  padding-top: 10px;
+}
+h1{
+	color:white;
+	padding-bottom: 5px;
+	font-size: 25px;
+}
+h3{
+	color:white;
+	font-size: 14px;
+}
+
+.text-box{
+	padding-top: 25px;
+	color:white;
+	padding-left: 15px;
+	padding-right: 10px;
+}
+
+.red{
+	color:red;
+	font-weight: bold;
+}
+
+.green{
+	color:green;
+	font-weight: bold;
+}
+
+.yellow{
+	color:yellow;
+	font-weight: bold;
+
+}
+
+.list{
+	padding-top: 20px;
+	color: white;
+	padding-left: 35px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+
+li{
+	padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 500px) {
+	body{
+		display: none;
+	}
+
+}
+
+
+/*----------js*/
+.work{
+	  animation: blink 400ms alternate infinite;
+
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+
+    opacity: 0.5;
+
+  }
+
+}
