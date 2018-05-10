@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 	background:#0c0d39;
+	font-size: 12px;
 }
 
 img{
@@ -35,7 +36,7 @@ h3{
 	color:white;
 	padding-left: 15px;
 	padding-right: 10px;
-	font-size: 12px;
+
 }
 
 .red{
