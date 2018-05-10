@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../../../favicon.ico">
+
+		<title>Starter Template for Bootstrap</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<img src="img/face.png" alt="">
+				</div>
+				<div class="col-8">
+					<h1>Артем Войнов</h1>
+					<br>
+					<h3>Бывший разработчик</h3>
+					<h3>Казино Вулкан</h3>
+				</div>
+			</div>
+		</div>
+		<div class="text-box">
+			<p>Я работал в Казино Вулкан пока они не 
+				уволили меня, кинув при этом на зарплату. 
+                Теперь, зная все их алгоритмы слотов, я хочу 
+                отомстить и поэтому публикую рабочие схемы как их обыграть.
+			   </p>
+			   <br>
+			   Доход по схеме сегодня: <span class="red" id="count"></span> Руб <br>
+			   Статус: <span class="green work">Работает </span><br>
+			   Последняя проверка: <span class="green" id="date"></span>
+		</div>
+
+		<div class="list">
+			<ol>
+				<li>Пополните счет минимум на 125 руб (те кто поплняет по 100 руб отсекаются).</li>
+				<li>Откройте автоматы <span class="yellow">Fruit Cocktail</span>(Фрут коктейл).</li>
+				<li>Крутим 6 раз с минимальной ставкой по всем линиям.</li>
+				<li>Удваиваем ставку , крутим  3 раза по 5 линиям.</li>
+				<li>После этого будет выйгрышная комбинация на 9 линиях <span class="green">x5</span> от ставки + бонус от <span class="green">3000</span> до <span class="green">9000</span> руб!!!</li>
+				<li>Не используйте комбинацию больше 2-3 раз в день.</li>
+			</ol>
+		</div>
+
+
+
+
+
+		<script>
+var clients = 356097;// начальное количество клиентов
+clients = localStorage.getItem("client") || clients;
+setInterval(function () {	
+document.getElementById('count').innerHTML = clients	
+clients+=150;	
+}, 3000);
+window.onbeforeunload = function () {
+localStorage.setItem("clients", clients);
+}
+</script>
+	</body>
+</html>
