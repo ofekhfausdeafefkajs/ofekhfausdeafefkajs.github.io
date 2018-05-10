@@ -62,11 +62,9 @@
 
 
 		<script>
-var clients = 356097;// начальное количество клиентов
-clients = getHours()*25000 + getMinutes()*10 + getSeconds()*10;		
-/*
+//var clients = 356097;// начальное количество клиентов
+var getHours()*25000 + getMinutes()*10 + getSeconds()*10;	// начальное количество клиентов			
 clients = localStorage.getItem("client") || clients;
-*/
 setInterval(function () {	
 document.getElementById('count').innerHTML = clients	
 //clients+=150;
