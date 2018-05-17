@@ -16,13 +16,11 @@
 	</style>
 	
 	<script>
-		/*
-		var date1 = new Date();
-		var date2 = new Date(date1.getFullYear(), date1.getMonth(), getDate() - 1);
-		
-		document.getElementById("text").innerHTML = date2.toDateString();*/
-		alert( 'Привет, Мир!' );
-		document.getElementById('text').innerHTML = "llp";
+		function dateYesterday(){
+			var date1 = new Date();
+			var date2 = new Date(date1.getFullYear(), date1.getMonth(), getDate() - 1);
+			document.getElementById("text").innerHTML = date2.toDateString();
+		}
 	</script>
 </head>
 
@@ -30,7 +28,9 @@
 	
 	<img src="Land_2_img.jpg"  width="100%" />
 	
-	<div id="text">4332</div>
+	<div id="text">35</div>
+	
+	<script>dateYesterday();</script>
 	
 	<div class="layer">
 		
