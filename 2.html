@@ -19,7 +19,9 @@
 		function dateYesterday(){
 			var date1 = new Date();
 			var date2 = new Date(date1.getFullYear(), date1.getMonth(), getDate() - 1);
-			document.getElementById("text").innerHTML = date2.toDateString();
+			document.getElementById('text').innerHTML = date2.toDateString();
+			document.getElementById('text').innerHTML = "llp";
+			alert("1");
 		}
 	</script>
 </head>
@@ -28,7 +30,7 @@
 	
 	<img src="Land_2_img.jpg"  width="100%" />
 	
-	<div id="text">35</div>
+	<div id="text">43</div>
 	
 	<script>dateYesterday();</script>
 	
