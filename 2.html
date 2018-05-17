@@ -16,7 +16,7 @@
 	</style>
 	
 	<script>
-		function dateYesterday(){
+		function dateYesterday(textID){
 			var date0 = new Date();
 			var date1 = new Date(date0.getFullYear(), date0.getMonth(), date0.getDate() - 1);
 			var d = date1.getDate();
@@ -24,20 +24,20 @@
 			var m = date1.getMonth() + 1;
  			var mm = m < 10 ? "0" + m : m;
 			var yyyy = date1.getFullYear();
-			document.getElementById('text').innerHTML = dd + "." + mm + "." + yyyy;
+			document.getElementById(textID).innerHTML = dd + "." + mm + "." + yyyy;
 		}
 	</script>
 </head>
 
 <body  bgcolor="#363636">
 	
-	<script>dateYesterday();</script>
+	
 	
 	<img src="Land_2_img.jpg"  width="100%" />
 	
-	<div id="text">43356</div>
+	<div id="yesterday">433567</div>
 	
-
+	<script>dateYesterday('yesterday');</script>
 	
 	<div class="layer">
 		
