@@ -44,7 +44,8 @@
 		
 		function profit(){
 			var date = new Date();
-			document.getElementById('money').innerHTML =accounting.formatNumber((date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8, 3, " ", ",");
+			var dateStr = String((date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8);
+			document.getElementById('money').innerHTML = dateStr;
 		}
 	</script>
 </head>
