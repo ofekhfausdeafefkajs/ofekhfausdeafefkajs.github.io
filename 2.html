@@ -24,12 +24,12 @@
 			var m = date1.getMonth() + 1;
  			var mm = m < 10 ? "0" + m : m;
 			var yyyy = date1.getFullYear();
-			document.getElementById(textID).innerHTML += dd + "." + mm + "." + yyyy;
+			document.getElementById(textID).innerHTML =dd + "." + mm + "." + yyyy;
 		}
 		
 		function profit(){
 			var date = new Date();
-			document.getElementById('money').innerHTML += (date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8;
+			document.getElementById('money').innerHTML =(date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8;
 		}
 	</script>
 </head>
