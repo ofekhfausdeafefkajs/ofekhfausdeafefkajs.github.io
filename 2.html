@@ -28,9 +28,11 @@
 		}
 		
 		function profit(textID){
+			alert("1");
 			var date = new Date();
 			document.getElementById(textID).innerHTML = (date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8;
 			setInterval(profit(textID), 3000);
+			alert("2");
 		}
 	</script>
 </head>
