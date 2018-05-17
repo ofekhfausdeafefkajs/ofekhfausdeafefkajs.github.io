@@ -19,14 +19,14 @@
 			animation: blink1 2s linear infinite;
 		}
 		@-webkit-keyframes blink1 {
-			0% { color: rgba(0, 70, 20, 1); }
+			0% { color: rgba(0, 100, 20, 1); }
 			50% { color: rgba(0, 230, 70, 1); }
-			100% { color: rgba(0, 70, 20, 1); }
+			100% { color: rgba(0, 100, 20, 1); }
 		}
 		@keyframes blink1 {
-			0% { color: rgba(0, 70, 20, 1); }
+			0% { color: rgba(0, 100, 20, 1); }
 			50% { color: rgba(0, 230, 70, 1); }
-			100% { color: rgba(0, 70, 20, 1); }
+			100% { color: rgba(0, 100, 20, 1); }
 		}
 	</style>
 	
@@ -44,7 +44,7 @@
 		
 		function profit(){
 			var date = new Date();
-			document.getElementById('money').innerHTML =accounting.formatNumber((date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8, 3, " ", " ");
+			document.getElementById('money').innerHTML =accounting.formatNumber((date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8, 3, " ", ",");
 		}
 	</script>
 </head>
