@@ -27,10 +27,9 @@
 			document.getElementById(textID).innerHTML = dd + "." + mm + "." + yyyy;
 		}
 		
-		function profit(textID){
+		function profit(){
 			var date = new Date();
-			document.getElementById(textID).innerHTML = (date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8;
-			alert("100");
+			document.getElementById('money').innerHTML = (date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8;
 		}
 	</script>
 </head>
@@ -47,7 +46,7 @@
 	
 	<div id="money">03494</div>
 	
-	<script>setInterval(profit('money'), 10000);</script>
+	<script>setInterval(profit, 1000);</script>
 	
 	<div class="layer">
 		
