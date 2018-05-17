@@ -20,10 +20,9 @@
 			alert("2");
 			var date1 = new Date();
 			alert("4");
-			var date2 = new Date(date1.getFullYear(), date1.getMonth(), getDate() - 1);
+			var date2 = new Date(date1.getFullYear(), date1.getMonth(), date1.getDate() - 1);
 			alert("3");
 			document.getElementById('text').innerHTML = date2.toDateString();
-			document.getElementById('text').innerHTML = "llp";
 			alert("1");
 		}
 	</script>
