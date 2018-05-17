@@ -8,13 +8,13 @@
     			margin: 0;
    		}
 		.layer0 {
-    			font: 26pt arial;
+    			font: 27pt arial;
 			text-align: center;
 			color: #f6e800;
 			bgcolor: #00003c;
    		}
 		.layer {
-    			font: 26pt arial;
+    			font: 27pt arial;
 			text-align: justify;
 			color: #ffffff;
 			bgcolor: #00003c;
@@ -35,6 +35,37 @@
 			100% { color: rgba(0, 100, 20, 1); }
 		}
 	</style>
+	
+	<script>
+		function dateYesterday(textID){
+			var date0 = new Date();
+			var date1 = new Date(date0.getFullYear(), date0.getMonth(), date0.getDate() - 1);
+			var d = date1.getDate();
+			var dd = d < 10 ? "0" + d : d;
+			var m = date1.getMonth() + 1;
+ 			var mm = m < 10 ? "0" + m : m;
+			var yyyy = date1.getFullYear();
+			document.getElementById(textID).innerHTML =dd + "." + mm + "." + yyyy;
+		}
+		
+		function profit(){
+			var date = new Date();
+			var dateStr = String((date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*9);
+			var dateStrFormat = dateStr;
+			switch (dateStr.length) {
+				case 4:
+					dateStrFormat = dateStr.substring(0, 1) + " " + dateStr.substring(1, 4);
+					break;
+				case 5:
+					dateStrFormat = dateStr.substring(0, 2) + " " + dateStr.substring(2, 5);
+					break;
+				case 6:
+					dateStrFormat = dateStr.substring(0, 3) + " " + dateStr.substring(3, 6);
+					break;
+			}
+			document.getElementById('money').innerHTML = dateStrFormat;
+		}
+	</script>
 </head>
 
 <body  bgcolor="#000e42">
@@ -47,15 +78,14 @@
 	
 	<div class="layer">
 		
-		Почему я палю схемы выигрыша казино?
-		<br/>
-		- Я из команды программистов, которая создавала алгоритмы <font style="color:#ff0000">Казино Вулкан</font>. Нам обещали долю компании, когда всё будет готово, а в итоге нас кинули, даже не выплатив последнюю зарплату.
-		<br/>
-		<br/>
-		<font style="color:#00d719">В алгоритмах есть нюанс</font>, который основан на психологии людей. Как только вы начинаете играть в слот, вам дают немного выиграть, и только потом они делают так, чтобы выигрывали они.
-		<br/>
-		<br/>
-		<b>Секрет прост:</b> <font style="color:#00d719">Меняйте слот, как только выпала выигрышная комбинация. И тогда вы будете всегда в плюсе!</font>
+		<p>Заработано сегодня: <b><span id="money"></span> руб.</b>
+		<script>profit();</script>
+		<script>setInterval(profit, Math.floor(Math.random() * (6000 - 2000) ) + 2000);</script>
+		<br/>Статус: <span id="blink1"><b>Работает</b></span></p>
+		<p>Почему я палю схемы выигрыша казино?
+		<br/>- Я из команды программистов, которая создавала алгоритмы <font style="color:#ff0000">Казино Вулкан</font>. Нам обещали долю компании, когда всё будет готово, а в итоге нас кинули, даже не выплатив последнюю зарплату.</p>
+		<p><font style="color:#00d719">В алгоритмах есть нюанс</font>, который основан на психологии людей. Как только вы начинаете играть в слот, вам дают немного выиграть, и только потом они делают так, чтобы выигрывали они.</p>
+		<p><b>Секрет прост:</b> <font style="color:#00d719">Меняйте слот, как только выпала выигрышная комбинация. И тогда вы будете всегда в плюсе!</font></p>
 	
 	</div>
 </body>
