@@ -45,7 +45,10 @@
 		function profit(){
 			var date = new Date();
 			var dateStr = String((date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8);
-			var dateStrFormat;
+			alert(dateStr.length);
+			alert(dateStr);
+			var dateStrFormat = dateStr;
+			
 			switch (dateStr.length) {
 				case 4:
 					dateStrFormat = dateStr.substring(0, 1) + " " + dateStr.substring(1, 3);
