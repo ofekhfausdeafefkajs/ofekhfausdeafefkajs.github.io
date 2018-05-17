@@ -19,11 +19,12 @@
 		function dateYesterday(){
 			alert("2");
 			var date1 = new Date();
-			alert("4");
-			var date2 = new Date(date1.getFullYear(), date1.getMonth(), date1.getDate() - 1);
-			alert("3");
-			document.getElementById('text').innerHTML = date2.toDateString();
-			alert("1");
+			var d = date1.getDate() - 1;
+			var dd = d < 10 ? "0" + d : d;
+			var m = date1.getMonth() + 1;
+ 			var mm = m < 10 ? "0" + m : m;
+			var yyyy = date1.getFullYear();
+			document.getElementById('text').innerHTML = dd + "." + mm + "." + yyyy;
 		}
 	</script>
 </head>
@@ -32,7 +33,7 @@
 	
 	<img src="Land_2_img.jpg"  width="100%" />
 	
-	<div id="text">433</div>
+	<div id="text">43356</div>
 	
 	<script>dateYesterday();</script>
 	
