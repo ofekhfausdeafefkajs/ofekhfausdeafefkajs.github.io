@@ -30,7 +30,7 @@
 		function profit(textID){
 			var date = new Date();
 			document.getElementById(textID).innerHTML = (date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*8;
-			alert(textID);
+			alert(document.getElementById(textID).innerHTML);
 			setInterval(profit(textID), 10000);
 		}
 	</script>
