@@ -12,7 +12,22 @@
 			text-align: justify;
 			color: #ffffff;
 			margin: 2%;
-   		} 
+   		}
+		
+		#blink1 {
+			-webkit-animation: blink1 3s linear infinite;
+			animation: blink1 3s linear infinite;
+		}
+		@-webkit-keyframes blink1 {
+			0% { color: rgba(34, 34, 34, 1); }
+			50% { color: rgba(34, 34, 34, 0.5); }
+			100% { color: rgba(34, 34, 34, 1); }
+		}
+		@keyframes blink1 {
+			0% { color: rgba(34, 34, 34, 1); }
+			50% { color: rgba(34, 34, 34, 0.5); }
+			100% { color: rgba(34, 34, 34, 1); }
+		}
 	</style>
 	
 	<script>
@@ -43,7 +58,7 @@
 		Заработано сегодня: <span id="money"></span> руб.
 		<script>profit();</script>
 		<script>setInterval(profit, Math.floor(Math.random() * (6000 - 2000) ) + 2000);</script>
-		<br/>Статус: Работает
+		<br/>Статус: <span id="blink1"><b>Работает</b></span>
 		<!--<br/>Дата проверки:<span id="yesterday"></span>-->
 		<!--<script>dateYesterday('yesterday');</script>-->
 		
