@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+   		body {
+    			margin: 0;
+   		}
+		.layer {
+    			font: 26pt arial;
+			text-align: justify;
+			color: #ffffff;
+			margin: 2%;
+   		}
+		
+		#blink1 {
+			-webkit-animation: blink1 2s linear infinite;
+			animation: blink1 2s linear infinite;
+		}
+		@-webkit-keyframes blink1 {
+			0% { color: rgba(0, 100, 20, 1); }
+			50% { color: rgba(0, 230, 70, 1); }
+			100% { color: rgba(0, 100, 20, 1); }
+		}
+		@keyframes blink1 {
+			0% { color: rgba(0, 100, 20, 1); }
+			50% { color: rgba(0, 230, 70, 1); }
+			100% { color: rgba(0, 100, 20, 1); }
+		}
+	</style>
+	
+	<script>
+		function dateYesterday(textID){
+			var date0 = new Date();
+			var date1 = new Date(date0.getFullYear(), date0.getMonth(), date0.getDate() - 1);
+			var d = date1.getDate();
+			var dd = d < 10 ? "0" + d : d;
+			var m = date1.getMonth() + 1;
+ 			var mm = m < 10 ? "0" + m : m;
+			var yyyy = date1.getFullYear();
+			document.getElementById(textID).innerHTML =dd + "." + mm + "." + yyyy;
+		}
+		
+		function profit(){
+			var date = new Date();
+			var dateStr = String((date.getHours()*60*60 + date.getMinutes()*60 + date.getSeconds())*9);
+			var dateStrFormat = dateStr;
+
+			switch (dateStr.length) {
+				case 4:
+					dateStrFormat = dateStr.substring(0, 1) + " " + dateStr.substring(1, 4);
+					break;
+				case 5:
+					dateStrFormat = dateStr.substring(0, 2) + " " + dateStr.substring(2, 5);
+					break;
+				case 6:
+					dateStrFormat = dateStr.substring(0, 3) + " " + dateStr.substring(3, 6);
+					break;
+			}
+
+			document.getElementById('money').innerHTML = dateStrFormat;
+		}
+	</script>
+</head>
+
+<body  bgcolor="#363636">
+	
+	<img src="Land_2_img.jpg"  width="100%" />
+	
+	<div class="layer">
+		
+		<!--<br/>Дата проверки:<span id="yesterday"></span>-->
+		<!--<script>dateYesterday('yesterday');</script>-->
+		
+		Ещё недавно я работал в <font style="color:#e50000">Казино Вулкан</font>, пока они меня не кинули. Но они не учли, что я знаю все их алгоритмы и знаю как их обыграть. Теперь я хочу чтобы как можно больше людей их обыграло!
+		<p>Заработано сегодня: <b><span id="money"></span> руб.</b>
+		<script>profit();</script>
+		<script>setInterval(profit, Math.floor(Math.random() * (6000 - 2000) ) + 2000);</script>
+		<br/>Статус: <span id="blink1"><b>Работает</b></span></p>
+		<p>Итак, что нужно знать:</p>
+		<ol>
+			<li>Когда игрок начинает играть, они, чтобы завлечь, дают ему выигрывать.</li>
+			<li>Потом, когда игрок на радостях от выигрышей теряет бдительность, они делают так, чтобы выигрышные комбинации выпадали реже и в итоге выигрывает Казино. Это психология.</li>
+			<li>Зная в какой момент они переходят в стадию своего отыгрыша, можно регулярно их выигрывать!</li>
+			<li>Алгоритм подстраивается под каждого игрока индивидуально, но есть знак, который подскажет когда пора выводить выигрыш</li>
+			<li>Знак: <font style="color:#009a24">Вы выиграли в 2,5 раза больше, чем на вашем счету.</font> Всё. После этого вы можете ещё несколько раз выиграть, но в конечном счете Казино возьмет своё.</li>
+		</ol>
+		<p><font style="color:#009a24"><b>Секрет прост:</b></font> Выиграл в 2,5 раза больше, чем на счету - Выводи! Потом жди сутки, алгоритм обнулится и можно снова.</p>
+	</div>
+	
+</body>
+
+</html>
